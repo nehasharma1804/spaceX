@@ -80,7 +80,7 @@ class App extends Component {
           <h1 className="App-header">SpaceX Launch Programs</h1>
           <Container fluid>
             <Row>
-              <Col xs={12} sm={12} md={6} lg={3}>
+              <Col xs={12} sm={12} md={6} lg={2} >
                 <Card className="App-filter-card">
                   <Card.Body>
                     <Card.Title className="App-filter-header">
@@ -200,11 +200,11 @@ class App extends Component {
                 </Card>
               </Col>
 
-              <Col xs={12} sm={12} md={6} lg={9}>
-                <Row>
+              <Col id="device"xs={12} sm={12} md={6} lg={10}  >
+                <Row >
                   {data.map((details) => {
                     return (
-                      <Col md={12} lg={4}>
+                      <Col md={12} lg={3}>
                         <RocketLaunchingDetails details={details} />
                       </Col>
                     );

@@ -1,11 +1,12 @@
 .Rocket-details-card {
-    width: 18rem;
+    width: 16rem;
     padding: 1rem;
     margin-bottom: 15px;
 }
 
 .Rocket-mission-image {
     background-color: #F2F2F2;
+    width:13rem
 }
 
 .Rocket-mission-name-flight-number {

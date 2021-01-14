@@ -13,7 +13,17 @@ function RocketLaunchingDetails({ details }) {
     rocket,
   } = details;
   const imgSrc = links.mission_patch_small;
-  const land_success = rocket.first_stage.cores[0].land_success;
+  let land_success =rocket.first_stage.cores[0].land_success
+  
+  if(rocket.first_stage.cores[0].land_success==true){
+    land_success ="true"
+  }
+  else if(rocket.first_stage.cores[0].land_success==false){
+    land_success="false"
+  }
+  else{
+    land_success='No Data available'
+  }
 
   return (
     <Card className="Rocket-details-card">
@@ -32,12 +42,12 @@ function RocketLaunchingDetails({ details }) {
           Mission Ids:{" "}
           <ul>
             {" "}
-            <li className="Rocket-detail-value">{mission_id}</li>
+            <li className="Rocket-detail-value">{mission_id.length>0?mission_id:'No Data available'}</li>
           </ul>
         </div>
         <div className="Rocket-detail-label">
           Launch Year:{" "}
-          <span className="Rocket-detail-value">{launch_year}</span>
+          <span className="Rocket-detail-value">{launch_year?launch_year:'No Data available'}</span>
         </div>
         <div className="Rocket-detail-label">
           Successful Launch:{" "}
@@ -48,7 +58,7 @@ function RocketLaunchingDetails({ details }) {
         <div className="Rocket-detail-label">
           Successful Landing:{" "}
           <span className="Rocket-detail-value">
-            {land_success ? "true" : "false"}
+            {land_success}
           </span>
         </div>
       </div>

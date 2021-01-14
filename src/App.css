@@ -44,7 +44,7 @@ body {
 }
 
 .App-filter-card {
-  width: 18rem;
+  width: 16rem;
   margin-bottom: 15px;
 }
 
@@ -68,7 +68,7 @@ body {
 
 .App-filter-button-container {
   width: 100%;
-  padding-left: 15px;
+
   padding-right: 15px;
   display: flex;
   flex-wrap: wrap;
@@ -80,7 +80,7 @@ body {
 
 .App-filter-button {
   flex: 0 40%;
-  margin: 10px;
+  margin: 9px;
 }
 
 @keyframes App-logo-spin {
@@ -91,3 +91,13 @@ body {
     transform: rotate(360deg);
   }
 }
+.offset{
+  padding-left:58px
+}
+@media (min-width:1025px) {
+  /* CSS goes here */
+  #device{
+    padding-left: 58px;
+  }
+}
+
